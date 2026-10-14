@@ -1,0 +1,164 @@
+/* 1. Thiết lập chung */
+:root {
+    --color-page-background: #fffaf3;
+    --color-text: #2b2118;
+    --color-block-background: #e7d9c8;
+    --color-card-background: #ffffff;
+    --color-border: #8b4513;
+    --color-button-background: #8b4513;
+    --color-heading: #5c2e0e;
+    --color-offer-title: #5c2e0e;
+    --color-badge-background: #d97706;
+    --color-description: #7a6a5a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, sans-serif;
+    color: var(--color-text);
+    background: var(--color-page-background);
+}
+
+body {
+    margin: 0;
+    min-width: 0;
+    background: var(--color-page-background);
+}
+
+/* 2. Vùng nội dung chính */
+.promotions-page {
+    width: 100%;
+    max-width: 480px;
+    margin: 32px auto 0;
+    padding: 24px;
+    background: var(--color-block-background);
+    border-radius: 16px;
+}
+
+/* 3. Tiêu đề và phần giới thiệu */
+.promotions-page__header {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.promotions-page__brand-name {
+    margin: 0 0 8px;
+    color: var(--color-border);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.promotions-page__title {
+    margin: 0;
+    color: var(--color-heading);
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+/* Mô tả phần đầu trang */
+.promotions-page__header-description {
+    margin: 12px 0 0;
+    color: var(--color-description);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* 4. Danh sách ưu đãi */
+.promotions-page__offers {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* 5. Thẻ ưu đãi */
+.promotions-page__offer-card {
+    min-width: 0;
+    padding: 20px;
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--color-card-background);
+    box-shadow: 0 4px 12px rgb(43 33 24 / 15%);
+}
+
+/* Nhãn khuyến mãi */
+.promotions-page__offer-badge {
+    display: inline-flex;
+    min-height: 28px;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    border-radius: 16px;
+    background: var(--color-badge-background);
+    color: var(--color-card-background);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Tên ưu đãi */
+.promotions-page__offer-title {
+    margin: 12px 0 8px;
+    color: var(--color-offer-title);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+/* Mô tả ưu đãi */
+.promotions-page__offer-description {
+    margin: 0;
+    color: var(--color-description);
+    font-size: 14px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+/* Nút nhận ưu đãi */
+.promotions-page__offer-link {
+    display: flex;
+    width: 100%;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    padding: 0 16px;
+    border: 2px solid var(--color-button-background);
+    border-radius: 8px;
+    background: var(--color-button-background);
+    color: var(--color-card-background);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, outline-color 0.2s ease;
+}
+
+/* Đổi màu nút khi rê chuột */
+.promotions-page__offer-link:hover {
+    border-color: var(--color-heading);
+    background: var(--color-heading);
+}
+
+/* Hiển thị trạng thái khi dùng bàn phím */
+.promotions-page__offer-link:focus-visible {
+    border-color: var(--color-heading);
+    background: var(--color-heading);
+    outline: 3px solid var(--color-badge-background);
+    outline-offset: 3px;
+}
+
+/* 6. Chân trang */
+.promotions-page__footer {
+    margin-top: 20px;
+    color: var(--color-description);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.promotions-page__footer p {
+    margin: 0;
+}
